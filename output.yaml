@@ -1,0 +1,644 @@
+- info:
+    level: '9'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 22.3%
+    name: 流放者怀表
+    sub_stats:
+      元素精通: '13'
+      攻击力: '12'
+      生命值: 3.3%
+      防御力: '19'
+    type: 时之沙
+  time: 25.5
+- info:
+    level: '8'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '137'
+    name: 学士的羽笔
+    sub_stats:
+      元素充能效率: 3.6%
+      攻击力: 3.3%
+      生命值: 3.3%
+      防御力: '17'
+    type: 死之羽
+  time: 25.779999999999994
+- info: failed
+  message: '"artifact name does not exist in ''战狂的令羽\\n\\n死之羽\\n\\n攻击力\\n\\n137\\n''"'
+  time: 26.139999999999986
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '102'
+    name: 流放者之羽
+    sub_stats:
+      元素充能效率: 4.1%
+      元素精通: '19'
+      生命值: '215'
+      防御力: 4.7%
+    type: 死之羽
+  time: 26.259999999999984
+- info:
+    level: '4'
+    main_stat: !!python/tuple
+    - 生命值
+    - '1377'
+    name: 魔女的炎之花
+    sub_stats:
+      元素精通: '17'
+      攻击力: '11'
+      防御力: 4.1%
+    type: 生之花
+  time: 26.41999999999998
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 26.539999999999978
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '045'
+    name: 饰金胸花
+    sub_stats:
+      元素精通: '13'
+      防御力: 4.1%
+    type: 生之花
+  time: 26.659999999999975
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '42'
+    name: 追忆之风
+    sub_stats:
+      攻击力: 3.7%
+      防御力: '17'
+    type: 死之羽
+  time: 26.779999999999973
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '42'
+    name: 魔女常燃之羽
+    sub_stats:
+      攻击力: 3.7%
+      生命值: '239'
+    type: 死之羽
+  time: 26.89999999999997
+- info: failed
+  message: '"artifact name does not exist in ''雷鸟的怜悦\\n\\n生之花\\n\\n生命值\\n\\n045\\n''"'
+  time: 27.019999999999968
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '045'
+    name: 学士的书签
+    sub_stats:
+      攻击力: '14'
+      暴击率: 2.2%
+    type: 生之花
+  time: 27.099999999999966
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 27.219999999999963
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 27.37999999999996
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '045'
+    name: 流放者之花
+    sub_stats:
+      暴击伤害: '4'
+      生命值: 4.7%
+      防御力: 4.7%
+    type: 生之花
+  time: 27.499999999999957
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '045'
+    name: 教官的胸花
+    sub_stats:
+      元素精通: '17'
+      攻击力: '12'
+    type: 生之花
+  time: 27.579999999999956
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '045'
+    name: 教官的胸花
+    sub_stats:
+      暴击伤害: 5.6%
+      生命值: 4.7%
+    type: 生之花
+  time: 27.739999999999952
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '045'
+    name: 教官的胸花
+    sub_stats:
+      攻击力: '16'
+      暴击率: 2.5%
+    type: 生之花
+  time: 27.81999999999995
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - 0.3%
+    name: 教官的怀表
+    sub_stats:
+      元素充能效率: 5.2%
+      攻击力: 4.7%
+      生命值: '215'
+    type: 时之沙
+  time: 27.939999999999948
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - 0.3%
+    name: 教官的怀表
+    sub_stats:
+      元素精通: '17'
+      攻击力: '16'
+    type: 时之沙
+  time: 28.019999999999946
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 28.139999999999944
+- info: failed
+  message: '"artifact name does not exist in ''幸运儿绿人花\\n\\n生之花\\n\\n生命值\\n\\n1405\\n''"'
+  time: 28.25999999999994
+- info:
+    level: '8'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 17.19%
+    name: 冒险家头带
+    sub_stats:
+      攻击力: '7'
+      暴击伤害: 4.2%
+      生命值: '129'
+    type: 理之冠
+  time: 28.37999999999994
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 28.499999999999936
+- info:
+    level: '7'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 15.6%
+    name: 教官的茶杯
+    sub_stats:
+      元素充能效率: 3.9%
+      生命值: 2.5%
+    type: 空之杯
+  time: 28.619999999999933
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 28.699999999999932
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 28.81999999999993
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 28.939999999999927
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 12.7%
+    name: 冒险家头带
+    sub_stats:
+      生命值: '143'
+    type: 理之冠
+  time: 29.059999999999924
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 12.7%
+    name: 流放者怀表
+    sub_stats:
+      元素充能效率: 2.7%
+      攻击力: '8'
+    type: 时之沙
+  time: 29.21999999999992
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 12.7%
+    name: 教官的茶杯
+    sub_stats:
+      暴击伤害: 4.2%
+    type: 空之杯
+  time: 29.339999999999918
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 12.7%
+    name: 教官的茶杯
+    sub_stats:
+      元素精通: '14'
+      暴击伤害: 3.7%
+    type: 空之杯
+  time: 29.459999999999916
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 12.7%
+    name: 战狂的时计
+    sub_stats:
+      元素充能效率: 3.5%
+      生命值: '100'
+    type: 时之沙
+  time: 29.579999999999913
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 雷元素伤害加成
+    - 12.7%
+    name: 战狂的骨杯
+    sub_stats:
+      元素精通: '13'
+      攻击力: 2.8%
+    type: 空之杯
+  time: 29.69999999999991
+- info: failed
+  message: '"artifact name does not exist in ''战狂的撤面\\n\\n理之冠\\n\\n攻击力\\n\\n12.7%\\n''"'
+  time: 29.819999999999908
+- info:
+    level: '5'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 12.7%
+    name: 感别之冠
+    sub_stats:
+      暴击率: 2.1%
+      生命值: 2.5%
+      防御力: 3.5%
+    type: 理之冠
+  time: 29.979999999999905
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 30.099999999999902
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 30.1399999999999
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 30.1799999999999
+- info: failed
+  message: '"artifact name does not exist in ''游医的银送\\n\\n生之花\\n\\n生命值\\n\\n918\\n''"'
+  time: 30.2199999999999
+- info: failed
+  message: '"artifact name does not exist in ''游医的银送\\n\\n生之花\\n\\n生命值\\n\\n918\\n''"'
+  time: 30.2599999999999
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 30.299999999999898
+- info: failed
+  message: '"artifact name does not exist in ''游医的银送\\n\\n生之花\\n\\n生命值\\n\\n918\\n''"'
+  time: 30.339999999999897
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 30.419999999999895
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 30.57999999999989
+- info:
+    level: '4'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '2'
+    name: 教官的怀表
+    sub_stats:
+      暴击率: 1.6%
+      生命值: 2.5%
+    type: 时之沙
+  time: 30.69999999999989
+- info:
+    level: '4'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '2'
+    name: 教官的茶杯
+    sub_stats:
+      元素充能效率: 3.9%
+      生命值: 3.5%
+    type: 空之杯
+  time: 30.779999999999887
+- info:
+    level: '4'
+    main_stat: !!python/tuple
+    - 暴击伤害
+    - 14.9%
+    name: 教官的帽子
+    sub_stats:
+      元素精通: '13'
+      攻击力: 2.5%
+    type: 理之冠
+  time: 30.939999999999884
+- info: failed
+  message: '"artifact name does not exist in ''理之冠\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 31.05999999999988
+- info: failed
+  message: '"artifact name does not exist in ''理之冠\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 31.09999999999988
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 31.13999999999988
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 31.17999999999988
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 31.299999999999876
+- info: failed
+  message: '"no value found in ''暴击伤害\\n''"'
+  time: 31.379999999999875
+- info: failed
+  message: '"artifact name does not exist in ''游医的银送\\n\\n生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 31.499999999999872
+- info: failed
+  message: '"artifact name does not exist in ''游医的银送\\n\\n生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 31.53999999999987
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 31.57999999999987
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '5'
+    name: 游医的怀钟
+    sub_stats:
+      防御力: '9'
+    type: 时之沙
+  time: 31.61999999999987
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '5'
+    name: 游医的药壶
+    sub_stats:
+      攻击力: '7'
+    type: 空之杯
+  time: 31.739999999999867
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '5'
+    name: 游医的药壶
+    sub_stats:
+      防御力: '10'
+    type: 空之杯
+  time: 31.899999999999864
+- info: failed
+  message: '"artifact name does not exist in ''生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 32.01999999999986
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 32.13999999999986
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 防御力
+    - 0.09%
+    name: 冒险家金杯
+    sub_stats:
+      攻击力: '8'
+    type: 空之杯
+  time: 32.259999999999856
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 草元素伤害加成
+    - '5'
+    name: 冒险家金杯
+    sub_stats:
+      生命值: '143'
+    type: 空之杯
+  time: 32.339999999999854
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 攻击力
+    - '5'
+    name: 冒险家金杯
+    sub_stats:
+      元素充能效率: 2.7%
+    type: 空之杯
+  time: 32.45999999999985
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 32.57999999999985
+- info: failed
+  message: '"artifact name does not exist in ''生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 32.69999999999985
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 32.819999999999844
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 32.93999999999984
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 33.05999999999984
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 33.179999999999836
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 33.299999999999834
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 33.41999999999983
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 33.53999999999983
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 33.61999999999983
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 防御力
+    - 0.09%
+    name: 教官的茶杯
+    sub_stats:
+      暴击率: 1.9%
+    type: 空之杯
+  time: 33.77999999999982
+- info: failed
+  message: '"no value found in ''生命值\\n''"'
+  time: 33.89999999999982
+- info: failed
+  message: '"no value found in ''生命值\\n''"'
+  time: 34.01999999999982
+- info: failed
+  message: '"artifact name does not exist in ''生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 34.139999999999816
+- info: failed
+  message: '"artifact name does not exist in ''生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 34.25999999999981
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 34.33999999999981
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 34.49999999999981
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 34.619999999999806
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 34.699999999999804
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 34.8599999999998
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 34.9799999999998
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 35.059999999999796
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 35.21999999999979
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 35.33999999999979
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 35.45999999999979
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 35.619999999999784
+- info: failed
+  message: '"artifact name does not exist in ''空之杯\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 35.69999999999978
+- info: failed
+  message: '"artifact name does not exist in ''空之杯\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 35.85999999999978
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 36.019999999999776
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 36.13999999999977
+- info: failed
+  message: '"artifact name does not exist in ''空之杯\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 36.21999999999977
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 36.37999999999977
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 36.459999999999766
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 36.579999999999764
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 36.73999999999976
+- info: failed
+  message: '"artifact name does not exist in ''理之冠\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 36.85999999999976
+- info: failed
+  message: '''artifact type does not exist'''
+  time: 36.939999999999756
+- info: failed
+  message: '"no value found in ''暴击伤害\\n''"'
+  time: 37.059999999999754
+- info: failed
+  message: '"no value found in ''治疗加成\\n''"'
+  time: 37.17999999999975
+- info: failed
+  message: '"no value found in ''治疗加成\\n''"'
+  time: 37.29999999999975
+- info: failed
+  message: '"no value found in ''治疗加成\\n''"'
+  time: 37.37999999999975
+- info: failed
+  message: '"artifact name does not exist in ''理之冠\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 37.499999999999744
+- info: failed
+  message: '"artifact name does not exist in ''理之冠\\n\\n生命值\\n\\n5.290\\n''"'
+  time: 37.61999999999974
+- info: failed
+  message: '"artifact name does not exist in ''生之花\\n\\n生命值\\n\\n430\\n''"'
+  time: 37.73999999999974
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 37.899999999999736
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 38.01999999999973
+- info: failed
+  message: '"artifact name does not exist in ''异国之多\\n\\n空之杯\\n\\n防御力\\n\\n0.09%\\n''"'
+  time: 38.13999999999973
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 38.25999999999973
+- info: failed
+  message: '"no value found in ''暴击伤害\\n''"'
+  time: 38.379999999999725
+- info:
+    level: '4'
+    main_stat: !!python/tuple
+    - 攻击力
+    - 9.0%
+    name: 幸运儿沙漏
+    sub_stats:
+      元素充能效率: 1.8%
+      攻击力: '5'
+    type: 时之沙
+  time: 38.459999999999724
+- info:
+    level: '4'
+    main_stat: !!python/tuple
+    - 元素充能效率
+    - 9.99%
+    name: 冒险家怀表
+    sub_stats:
+      暴击伤害: 2.2%
+    type: 时之沙
+  time: 38.61999999999972
+- info: failed
+  message: '"artifact name does not exist in ''游医的银送\\n\\n生之花\\n\\n生命值\\n\\n258\\n''"'
+  time: 38.73999999999972
+- info:
+    level: '0'
+    main_stat: !!python/tuple
+    - 生命值
+    - '258'
+    name: 冒险家之花
+    sub_stats: {}
+    type: 生之花
+  time: 38.819999999999716
+- info: failed
+  message: '"no matched main stat in ''''"'
+  time: 38.97999999999971
+- info: failed
+  message: '"no matched main stat in ''祝圣油高\\n\\n圣遗物强化素材\\n''"'
+  time: 39.05999999999971

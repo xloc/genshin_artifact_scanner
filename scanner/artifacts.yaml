@@ -1,0 +1,403 @@
+adventurer:
+  2-piece_bonus: 生命值上限提升1000点。
+  4-piece_bonus: 开启各类宝箱后的5秒内，持续恢复30%生命值
+  item-name:
+    时之沙: 冒险家怀表
+    死之羽: 冒险家尾羽
+    理之冠: 冒险家头带
+    生之花: 冒险家之花
+    空之杯: 冒险家金杯
+  max_rarity: 3
+  name: 冒险家
+archaic-petra:
+  2-piece_bonus: 获得15%岩元素伤害加成。
+  4-piece_bonus: 获得元素反应形成的晶片时，队伍中所有角色获得35%对应元素伤害加成，持续10秒。同时只能通过该效果获得一种元素伤害加成。
+  item-name:
+    时之沙: 星罗圭璧之晷
+    死之羽: 嵯峨群峰之翼
+    理之冠: 不动玄石之相
+    生之花: 磐陀裂生之花
+    空之杯: 巉岩琢塑之樽
+  max_rarity: 5
+  name: 悠古的磐岩
+berserker:
+  2-piece_bonus: 暴击率提高12%。
+  4-piece_bonus: 生命值低于70%时，暴击率额外提升24%。
+  item-name:
+    时之沙: 战狂的时计
+    死之羽: 战狂的翎羽
+    理之冠: 战狂的鬼面
+    生之花: 战狂的蔷薇
+    空之杯: 战狂的骨杯
+  max_rarity: 4
+  name: 战狂
+blizzard-strayer:
+  2-piece_bonus: 获得15%冰元素伤害加成。
+  4-piece_bonus: 攻击处于冰元素影响下的敌人时，暴击率提高20%；若敌人处于冻结状态下，则暴击率额外提高20%。
+  item-name:
+    时之沙: 冰雪故园的终期
+    死之羽: 摧冰而行的执望
+    理之冠: 破冰踏雪的回音
+    生之花: 历经风雪的思念
+    空之杯: 遍结寒霜的傲骨
+  max_rarity: 5
+  name: 冰风迷途的勇士
+bloodstained-chivalry:
+  2-piece_bonus: 造成的物理伤害提高25%。
+  4-piece_bonus: 击败敌人后的10秒内，释放重击时不消耗体力，且重击造成的伤害提升50%。
+  item-name:
+    时之沙: 骑士染血之时
+    死之羽: 染血的黑之羽
+    理之冠: 染血的铁假面
+    生之花: 染血的铁之心
+    空之杯: 染血骑士之杯
+  max_rarity: 5
+  name: 染血的骑士道
+brave-heart:
+  2-piece_bonus: 攻击力提高18%。
+  4-piece_bonus: 对生命值高于50%的敌人，造成的伤害增加30%。
+  item-name:
+    时之沙: 勇士的坚毅
+    死之羽: 勇士的期许
+    理之冠: 勇士的冠冕
+    生之花: 勇士的勋章
+    空之杯: 勇士的壮行
+  max_rarity: 4
+  name: 勇士之心
+crimson-witch-of-flames:
+  2-piece_bonus: 获得15%火元素伤害加成。
+  4-piece_bonus: 超载、燃烧反应造成的伤害提升40%，蒸发、融化反应的加成系数提高15%。释放元素战技后的10秒内，二件套的效果提高50%，改效果最多叠加3次。
+  item-name:
+    时之沙: 魔女破灭之时
+    死之羽: 魔女常燃之羽
+    理之冠: 焦灼的魔女帽
+    生之花: 魔女的炎之花
+    空之杯: 魔女的心之火
+  max_rarity: 5
+  name: 炽烈的炎之魔女
+defender-s-will:
+  2-piece_bonus: 防御力提高30%。
+  4-piece_bonus: 队伍里每有不同一种元素类型的自己的角色，自身获得30%相应的元素抗性。
+  item-name:
+    时之沙: 守护座钟
+    死之羽: 守护徽印
+    理之冠: 守护束带
+    生之花: 守护之花
+    空之杯: 守护之皿
+  max_rarity: 4
+  name: 守护之心
+emblem-of-severed-fate:
+  2-piece_bonus: 元素充能效率提高20%。
+  4-piece_bonus: 基于元素充能效率的25%，提高元素爆发造成的伤害，至多通过这种方式获得75%提升。
+  item-name:
+    时之沙: 雷云之笼
+    死之羽: 切落之羽
+    理之冠: 华饰之兜
+    生之花: 明威之镡
+    空之杯: 绯花之壶
+  max_rarity: 5
+  name: 绝缘之旗印
+gambler:
+  2-piece_bonus: 元素战技造成的伤害提升20%。
+  4-piece_bonus: 打倒敌人时，有100%概率清除元素战技的冷却时间，该效果每15秒至多触发一次。
+  item-name:
+    时之沙: 赌徒的怀表
+    死之羽: 赌徒的羽饰
+    理之冠: 赌徒的耳环
+    生之花: 赌徒的胸花
+    空之杯: 赌徒的骰蛊
+  max_rarity: 4
+  name: 赌徒
+glacier-and-snowfield:
+  2-piece_bonus: 获得15冰元素伤害加成（未上线）。
+  4-piece_bonus: 超导反应造成伤害提升100%，融化反应加成系数提升15%，释放元素战技后10秒内，冰元素伤害加成额外提升30%。
+  item-name:
+    时之沙: null
+    死之羽: null
+    理之冠: null
+    生之花: null
+    空之杯: 北风之盏
+  max_rarity: 5
+  name: 冰之川与雪之砂
+gladiator-s-finale:
+  2-piece_bonus: 攻击力提高18%。
+  4-piece_bonus: 装备该圣遗物套装的角色为单手剑、双手剑、长柄武器角色时，角色普通攻击造成的伤害提高35%。
+  item-name:
+    时之沙: 角斗士的希冀
+    死之羽: 角斗士的归宿
+    理之冠: 角斗士的凯旋
+    生之花: 角斗士的留恋
+    空之杯: 角斗士的酣醉
+  max_rarity: 5
+  name: 角斗士的终幕礼
+heart-of-depth:
+  2-piece_bonus: 获得15%水元素伤害加成。
+  4-piece_bonus: 施放元素战技后的15秒内，普通攻击与重击造成的伤害提高30%。
+  item-name:
+    时之沙: 坚铜罗盘
+    死之羽: 追忆之风
+    理之冠: 酒渍船帽
+    生之花: 饰金胸花
+    空之杯: 沉波之盏
+  max_rarity: 5
+  name: 沉沦之心
+husk-of-opulent-dreams:
+  2-piece_bonus: 防御力提高30%。
+  4-piece_bonus: 装备此圣遗物套装的角色在以下情况下，将获得「问答」效果：在场上用岩元素攻击命中敌人后获得一层，每0.3秒至多触发一次；在队伍后台中，每3秒获得一层，问答最多叠加4层，每层能提供6%防御力与6%岩元素伤害加成。每6秒，若未获得问答效果，将损失一层。
+  item-name:
+    时之沙: 众生之谣
+    死之羽: 华馆之羽
+    理之冠: 形骸之笠
+    生之花: 荣花之期
+    空之杯: 梦醒之瓢
+  max_rarity: 5
+  name: 华馆梦醒形骸记
+instructor:
+  2-piece_bonus: 元素精通提高80点。
+  4-piece_bonus: 触发元素反应后，队伍中所有角色的元素精通提高120点，持续8秒。
+  item-name:
+    时之沙: 教官的怀表
+    死之羽: 教官的羽饰
+    理之冠: 教官的帽子
+    生之花: 教官的胸花
+    空之杯: 教官的茶杯
+  max_rarity: 4
+  name: 教官
+lavawalker:
+  2-piece_bonus: 火元素抗性提高40%。
+  4-piece_bonus: 对处于火元素影响下的敌人造成的伤害提升35%。
+  item-name:
+    时之沙: 渡火者的煎熬
+    死之羽: 渡火者的解脱
+    理之冠: 渡火者的智慧
+    生之花: 渡火者的决绝
+    空之杯: 渡火者的醒悟
+  max_rarity: 5
+  name: 渡过烈火的贤人
+lucky-dog:
+  2-piece_bonus: 防御力提高100点。
+  4-piece_bonus: 拾取摩拉时，恢复300点生命值。
+  item-name:
+    时之沙: 幸运儿沙漏
+    死之羽: 幸运儿鹰羽
+    理之冠: 幸运儿银冠
+    生之花: 幸运儿绿花
+    空之杯: 幸运儿之杯
+  max_rarity: 3
+  name: 幸运儿
+maiden-beloved:
+  2-piece_bonus: 角色造成的治疗效果提升15%。
+  4-piece_bonus: 施放元素战技或元素爆发后的10秒内，队伍中所有角色受治疗效果加成提高20%。
+  item-name:
+    时之沙: 少女苦短的良辰
+    死之羽: 少女飘摇的思念
+    理之冠: 少女易逝的芳颜
+    生之花: 远方的少女之心
+    空之杯: 少女片刻的闲暇
+  max_rarity: 5
+  name: 被怜爱的少女
+martial-artist:
+  2-piece_bonus: 普通攻击与重击造成的伤害提高15%。
+  4-piece_bonus: 施放元素战技后的8秒内，普通攻击和重击造成的伤害提升25%。
+  item-name:
+    时之沙: 武人的水漏
+    死之羽: 武人的羽饰
+    理之冠: 武人的头巾
+    生之花: 武人的红花
+    空之杯: 武人的酒杯
+  max_rarity: 4
+  name: 武人
+noblesse-oblige:
+  2-piece_bonus: 元素爆发造成的伤害提升20%。
+  4-piece_bonus: 释放元素爆发后，队伍中所有角色攻击力提升20%，持续12秒，该效果不可叠加。
+  item-name:
+    时之沙: 宗室时计
+    死之羽: 宗室之翎
+    理之冠: 宗室面具
+    生之花: 宗室之花
+    空之杯: 宗室银瓮
+  max_rarity: 5
+  name: 昔日宗室之仪
+ocean-hued-clam:
+  2-piece_bonus: 治疗加成提高15%。
+  4-piece_bonus: 装备此圣遗物套装的角色对队伍中的角色进行治疗时，将产生持续3秒的海染泡沫，记录治疗的生命值回复量（包括溢出值）。持续时间结束时，海染泡沫将会爆炸，对周围敌人造成90%累积回复量的伤害（该伤害结算方式同感电、超导等元素反应，但不受元素精通、等级或反应伤害加成效果影响）。每3.5秒至多产生一个海染泡沫；海染泡沫至多记录30000点回复量，含溢出部分的治疗量；自己的队伍中至多存在一个海染泡沫。装备此圣遗物套装的角色处于队伍后台时；依然能触发该效果。
+  item-name:
+    时之沙: 离别之贝
+    死之羽: 渊宫之羽
+    理之冠: 海祇之冠
+    生之花: 海染之花
+    空之杯: 真珠之笼
+  max_rarity: 5
+  name: 海染砗磲
+pale-flame:
+  2-piece_bonus: 造成物理伤害提高15%。
+  4-piece_bonus: 元素战技命中敌人后，攻击力提升9%。该效果持续7秒，至多叠加2层，每0.3秒至多触发一次。叠满2层时，2件套的效果提升100%。
+  item-name:
+    时之沙: 停摆之刻
+    死之羽: 贤医之羽
+    理之冠: 嗤笑之面
+    生之花: 无垢之花
+    空之杯: 超越之盏
+  max_rarity: 5
+  name: 苍白之火
+prayers-for-destiny:
+  1-piece_bonus: 受到水元素附着效果的持续时间减少40%。
+  item-name:
+    理之冠: 祭水礼冠
+  max_rarity: 4
+  name: 祭水之人
+prayers-for-illumination:
+  1-piece_bonus: 受到火元素附着效果的持续时间减少40%。
+  item-name:
+    理之冠: 祭火礼冠
+  max_rarity: 4
+  name: 祭火之人
+prayers-for-wisdom:
+  1-piece_bonus: 受到雷元素附着效果的持续时间减少40%。
+  item-name:
+    理之冠: 祭雷礼冠
+  max_rarity: 4
+  name: 祭雷之人
+prayers-to-springtime:
+  1-piece_bonus: 受到的冰元素附着效果的持续时间减少40%。
+  item-name:
+    理之冠: 祭冰礼冠
+  max_rarity: 4
+  name: 祭冰之人
+prayers-to-the-firmament:
+  1-piece_bonus: 受到风元素附着效果的持续时间减少40%（未上线，甚至可能不存在）。
+  item-name: {}
+  max_rarity: 4
+  name: 祭风之人
+resolution-of-sojourner:
+  2-piece_bonus: 攻击力提高18%。
+  4-piece_bonus: 重击的暴击率提升30%。
+  item-name:
+    时之沙: 逐光之石
+    死之羽: 归乡之羽
+    理之冠: 感别之冠
+    生之花: 故人之心
+    空之杯: 异国之盏
+  max_rarity: 4
+  name: 行者之心
+retracing-bolide:
+  2-piece_bonus: 护盾强效提高35%。
+  4-piece_bonus: 处于护盾庇护下时，额外获得40%普通攻击和重击伤害加成。
+  item-name:
+    时之沙: 夏祭之刻
+    死之羽: 夏祭终末
+    理之冠: 夏祭之面
+    生之花: 夏祭之花
+    空之杯: 夏祭水玉
+  max_rarity: 5
+  name: 逆飞的流星
+scholar:
+  2-piece_bonus: 元素充能效率提高20%。
+  4-piece_bonus: 获得元素微粒或元素晶球时，队伍中所有弓箭和法器角色额外恢复3点元素能量。该效果每3秒只能触发一次。
+  item-name:
+    时之沙: 学士的时钟
+    死之羽: 学士的羽笔
+    理之冠: 学士的镜片
+    生之花: 学士的书签
+    空之杯: 学士的墨杯
+  max_rarity: 4
+  name: 学士
+shimenawa-s-reminiscence:
+  2-piece_bonus: 攻击力提高18%。
+  4-piece_bonus: 释放元素战技时，如果角色的元素能量高于或等于15点，则会流失15点元素能量，使接下来的10秒内，普通攻击、重击、下落攻击造成的伤害提高50%，持续期间内效果不会再次触发。
+  item-name:
+    时之沙: 朝露之时
+    死之羽: 思忆之矢
+    理之冠: 无常之面
+    生之花: 羁缠之花
+    空之杯: 祈望之心
+  max_rarity: 5
+  name: 追忆之注连
+tenacity-of-the-millelith:
+  2-piece_bonus: 生命值提升20%。
+  4-piece_bonus: 元素战技命中敌人后，使队伍中附近的所有角色攻击力提升20%，护盾强效提升30%，持续3秒。该效果每0.5秒至多触发一次。装备此圣遗物套装的角色处于队伍后台时，依然能触发该效果
+  item-name:
+    时之沙: 金铜时晷
+    死之羽: 昭武翎羽
+    理之冠: 将帅兜鍪
+    生之花: 勋绩之花
+    空之杯: 盟誓金爵
+  max_rarity: 5
+  name: 千岩牢固
+the-exile:
+  2-piece_bonus: 施放元素爆发后，每2秒为队伍中所有角色（不包括自己）恢复2点元素能量。该效果持续6秒，无法叠加。
+  4-piece_bonus: 。
+  item-name:
+    时之沙: 流放者怀表
+    死之羽: 流放者之羽
+    理之冠: 流放者头冠
+    生之花: 流放者之花
+    空之杯: 流放者之杯
+  max_rarity: 4
+  name: 流放者
+thundering-fury:
+  2-piece_bonus: 获得15%雷元素伤害加成。
+  4-piece_bonus: 超载、感电、超导反应造成的伤害提交40%。触发这些元素反应时，元素战技冷却时间减少1秒。该效果每0.8秒最多触发一次。
+  item-name:
+    时之沙: 雷霆的时计
+    死之羽: 雷灾的孑遗
+    理之冠: 唤雷的头冠
+    生之花: 雷鸟的怜悯
+    空之杯: 降雷的凶兆
+  max_rarity: 5
+  name: 如雷的盛怒
+thundersoother:
+  2-piece_bonus: 雷元素抗性提高40%。
+  4-piece_bonus: 对处于雷元素影响下的敌人造成的伤害提升35%。
+  item-name:
+    时之沙: 平雷之刻
+    死之羽: 平雷之羽
+    理之冠: 平雷之冠
+    生之花: 平雷之心
+    空之杯: 平雷之器
+  max_rarity: 5
+  name: 平息鸣雷的尊者
+tiny-miracle:
+  2-piece_bonus: 所有元素抗性提高20%。
+  4-piece_bonus: 受到某个元素类型的伤害后，相应的抗性提升30%，持续10秒。该效果每10秒只能触发一次。
+  item-name:
+    时之沙: 奇迹之沙
+    死之羽: 奇迹之羽
+    理之冠: 奇迹耳坠
+    生之花: 奇迹之花
+    空之杯: 奇迹之杯
+  max_rarity: 4
+  name: 奇迹
+traveling-doctor:
+  2-piece_bonus: 角色受到的治疗效果提高20%。
+  4-piece_bonus: 释放元素爆发时，恢复20%生命值。
+  item-name:
+    时之沙: 游医的怀钟
+    死之羽: 游医的枭羽
+    理之冠: 游医的方巾
+    生之花: 游医的银莲
+    空之杯: 游医的药壶
+  max_rarity: 3
+  name: 游医
+viridescent-venerer:
+  2-piece_bonus: 获得15%风元素伤害加成。
+  4-piece_bonus: 扩散反应造成的伤害提升60%。根据扩散的元素类型，降低受到影响的敌人40%的对应元素抗性，持续10秒。
+  item-name:
+    时之沙: 翠绿猎人的笃定
+    死之羽: 猎人青翠的箭羽
+    理之冠: 翠绿的猎人之冠
+    生之花: 野花记忆的绿野
+    空之杯: 翠绿猎人的容器
+  max_rarity: 5
+  name: 翠绿之影
+wanderer-s-troupe:
+  2-piece_bonus: 装备该圣遗物套装的角色为法器、弓箭角色时，角色重击造成的伤害提高35%。
+  4-piece_bonus: 。
+  item-name:
+    时之沙: 终幕的时计
+    死之羽: 琴师的箭羽
+    理之冠: 指挥的礼帽
+    生之花: 乐团的晨光
+    空之杯: 吟游者之壶
+  max_rarity: 5
+  name: 流浪大地的乐团
