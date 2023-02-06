@@ -2,12 +2,12 @@ from dataclasses import dataclass
 
 @dataclass
 class Artifact:
-  type: str
-  name: str
-  level: str
+  type: object
+  name: object
+  level: object
 
-  main_stat: str
-  sub_stats: dict[str, str]
+  main_stat: object
+  sub_stats: object
 
 def test_artifact_dataclass():
   data = {
