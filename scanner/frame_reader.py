@@ -27,7 +27,6 @@ class FrameReader:
       self.time += self.interval
       self.capture.set(cv.CAP_PROP_POS_MSEC, int(self.time * 1000))
 
-
     return frame
 
 

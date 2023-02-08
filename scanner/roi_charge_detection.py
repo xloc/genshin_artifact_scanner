@@ -8,6 +8,7 @@ def pyramid_down(image, n):
     image = cv.pyrDown(image)
   return image
 
+
 class ScreenState:
   roi: ArtifactROI
   transformed_roi: ArtifactROI
@@ -58,6 +59,8 @@ class ScreenState:
       print(self.transformed_roi)
 
     return self.compare(small_screen)
+
+
 
 def test_roi_detection():
   roi = ArtifactROI(
