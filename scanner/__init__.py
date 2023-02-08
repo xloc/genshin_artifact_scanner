@@ -5,6 +5,8 @@ from .matcher import (
     match_artifact_type,
     match_level,
     match_main_stat,
+    match_main_stat_name,
+    match_main_stat_value,
     match_sub_stat,
     match_sub_stats,
 )
