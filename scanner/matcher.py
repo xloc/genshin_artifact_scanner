@@ -43,8 +43,7 @@ def test_match_sub_stats():
 
 main_stats = "生命值 攻击力	防御力 元素精通 元素充能效率 物理伤害加成 暴击率 暴击伤害 治疗加成".split()
 main_stats += [element+"元素伤害加成" for element in "火水风草冰雷岩"]
-value_re = re.compile(r'\d+\.\d+%|\d+')
-def match_main_stat(s):
+def match_main_stat_name(s):
   matched = False
   for stat in main_stats:
     if stat in s:
@@ -52,12 +51,22 @@ def match_main_stat(s):
       break
   if not matched:
     raise KeyError(f"no matched main stat in {s!r}")
+  
+  return stat
 
+value_re = re.compile(r'\d+\.\d+%|\d+')
+def match_main_stat_value(s):
   value = value_re.search(s)
   if value is None:
     raise KeyError(f"no value found in {s!r}")
+  
+  return value[0]
 
-  return stat, value[0]
+def match_main_stat(s):
+  name = match_main_stat_name(s)
+  value = match_main_stat_value(s)
+
+  return name, value
 
 def test_match_main_stat():
   s = '流放者怀表\n\n时之沙\n\n攻击力\n\n22.3%\n\x0c'
