@@ -43,11 +43,14 @@ class ROI:
     return [self.x1, self.y1, self.x2, self.y2][i]
   
   def clip_image(self, image: numpy.array):
-    return image[self.y1:self.y2, self.x1:self.x2, :]
+    return image[self.y1:self.y2, self.x1:self.x2, ...]
   
   def translate(self, x, y):
     return ROI(self.x1 + x, self.y1 + y,
                self.x2 + x, self.y2 + y)
+  
+  def copy(self):
+    return ROI(**dataclasses.asdict(self))
 
 def test_roi_unpacking():
   a, b, c, d = ROI(1, 2, 3, 4)

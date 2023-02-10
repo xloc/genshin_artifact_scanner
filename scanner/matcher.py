@@ -123,3 +123,18 @@ def test_match_artifact_name():
   s = '流放者怀表\n\n时之沙\n\n攻击力\n\n22.3%\n\x0c'
   ret = match_artifact_name(s)
   assert ret == '流放者怀表'
+
+
+
+# [\u4e00-\u9fa5] stands for chinese characters
+def match_artifact_set_name(s):
+  set_re = re.compile(r"([\u4e00-\u9fa5]+):")
+  ret = set_re.search(s)
+  if ret is None:
+    raise KeyError(f"artifact set name does not exist in {s!r}")
+  else:
+    return ret[1]
+
+def test():
+  s = '流放者:\n\x0c'
+  assert match_artifact_set_name(s) == '流放者'
