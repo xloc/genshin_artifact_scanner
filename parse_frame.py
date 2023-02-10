@@ -6,7 +6,7 @@ import pytesseract as ocr
 class allroi:
   artifact_pannel = ROI(1213, 148, 1830, 1111)
   sub_stats = ROI(1270, 590, 1800, artifact_pannel.y1)
-  main = ROI(1214, 230, 1600, 430)
+  main = ROI(1214, 230, 1550, 430)
   level = ROI(1251, 530, 1324, 570)
 
 
@@ -71,7 +71,8 @@ def parse_frame(frame):
   # artifact set name
   set_name_roi = find_artifact_set_name_roi(frame)
   slice = set_name_roi.clip_image(gray)
-  text = ocr.image_to_string(slice, lang="chi_sim")
+  slice = 255 - slice
+  text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   artifact.set_name = scanner.match_artifact_set_name(text)
 
   # substats
@@ -96,11 +97,11 @@ def parse_frame(frame):
   slice = main_stat_name.clip_image(gray)
   slice = 255 - slice
   slice = cv.equalizeHist(slice)
-  text = ocr.image_to_string(slice, lang="chi_sim")
+  text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   artifact.main_stat_name = scanner.match_main_stat_name(text)
   # main stat value
   slice = main_stat_value.clip_image(gray)
-  text = ocr.image_to_string(slice)
+  text = ocr.image_to_string(slice, config="--psm 6")
   artifact.main_stat_value = scanner.match_main_stat_value(text)
 
   # level
@@ -145,7 +146,7 @@ def test_parse():
         okay = 'fail'
         print(f'{reader.frame_time:.4f}', e)
         artifacts.append(dict(time=reader.frame_time, error=True, message=str(e)))
-      cv.imwrite(f"error/{reader.frame_time:.4f} {okay}.png", frame)
+        cv.imwrite(f"error/{reader.frame_time:.4f} {okay}.png", frame)
         # raise e
   
   

@@ -38,6 +38,8 @@ class ROI:
 
   p1 = property(lambda s: (s.x1, s.y1))
   p2 = property(lambda s: (s.x2, s.y2))
+  w = property(lambda s: s.x2 - s.x1)
+  h = property(lambda s: s.y2 - s.y1)
 
   def __getitem__(self, i):
     return [self.x1, self.y1, self.x2, self.y2][i]

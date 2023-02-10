@@ -14,9 +14,14 @@ def test_match_level():
 
 
 
+VALUE_OR_PERCENTAGE_REGEX = r"\d+\.\d+%|\d[\d,]*"
+
+
+
 sub_stat_re = re.compile(
-    r'(生命值|攻击力|防御力|元素精通|暴击率|暴击伤害|元素充能效率)'
-    r'\+(\d+\.\d+%|\d+)')
+    r'(生命值|攻击力|防御力|元素精通|暴击率|暴击伤害|元素充能效率)' +
+    r'\+' +
+    r'({})'.format(VALUE_OR_PERCENTAGE_REGEX))
 def match_sub_stat(ln):
   groups = sub_stat_re.search(ln)
   if groups is None:
@@ -54,7 +59,7 @@ def match_main_stat_name(s):
   
   return stat
 
-value_re = re.compile(r'\d+\.\d+%|\d+')
+value_re = re.compile(VALUE_OR_PERCENTAGE_REGEX)
 def match_main_stat_value(s):
   value = value_re.search(s)
   if value is None:
@@ -135,6 +140,6 @@ def match_artifact_set_name(s):
   else:
     return ret[1]
 
-def test():
+def test_match_artifact_set_name():
   s = '流放者:\n\x0c'
   assert match_artifact_set_name(s) == '流放者'
