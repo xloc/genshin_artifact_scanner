@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: genshin-artifact-scanner
+Version: 0.0.1
+Summary: An artifact parser from the artifact listing pages to a list of artifact attributes for the game Genshin Impact
+Author: xloc
+Author-email: xloc.cc@outlook.com

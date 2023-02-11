@@ -1,0 +1,11 @@
+setup.py
+genshin_artifact_scanner.egg-info/PKG-INFO
+genshin_artifact_scanner.egg-info/SOURCES.txt
+genshin_artifact_scanner.egg-info/dependency_links.txt
+genshin_artifact_scanner.egg-info/top_level.txt
+scanner/__init__.py
+scanner/artifact_dataclass.py
+scanner/frame_reader.py
+scanner/matcher.py
+scanner/roi.py
+scanner/roi_charge_detection.py
