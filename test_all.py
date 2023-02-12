@@ -78,7 +78,7 @@ def test_parse_all(video_path: str):
 import click
 
 @click.command()
-@click.option("--output_path", type=click.Path(exists=True, dir_okay=False), default="output.yaml", help='artifacts output filename')
+@click.option("--output_path", type=click.Path(exists=False, dir_okay=False), default="output.yaml", help='artifacts output filename')
 @click.argument("video_path", type=click.Path(exists=True, dir_okay=False))
 def command(output_path, video_path):
   result = test_parse_all(video_path)
