@@ -1,0 +1,3 @@
+include test_video.mp4
+include scanner/artifacts.yaml
+include test/test_video.mp4
