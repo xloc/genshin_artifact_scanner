@@ -37,26 +37,42 @@ def parse_frame(frame: np.array):
   return artifact
 
 
+
+import json
+def is_data_same(a, b):
+  aa = json.dumps(a, sort_keys=True)
+  bb = json.dumps(b, sort_keys=True)
+  return aa == bb
+
+
 def test_parse_all(video_path: str):
   if not video_path:
     video_path = frame_reader.get_test_video_path()
   reader = frame_reader.FrameReader(video_path, time=0)
 
-  state = ScreenState([allroi.upper, allroi.level])
+  state = ScreenState([allroi.upper, allroi.lower])
 
   artifacts = []
+  last_info = None
   while True:
     frame = reader.next()
     if frame is None: break
-
+    
     if not state.is_same(frame):
       info = parse_frame(frame)
       info = info.__dict__
+
+      if is_data_same(info, last_info):
+        continue
+
       result = dict(time=reader.frame_time, info=info)
       artifacts.append(result)
+      last_info = info
       print(f'{reader.frame_time:.4f}', info)
 
   return artifacts
+
+
 
 
 import click
