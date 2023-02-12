@@ -80,11 +80,17 @@ def test_match_main_stat():
 
 
 
-artifact_types = "生之花 死之羽 时之沙 空之杯 理之冠".split()
+artifact_types = dict(
+  花="生之花", 
+  羽="死之羽",
+  沙="时之沙",
+  杯="空之杯",
+  冠="理之冠",
+)
 def match_artifact_type(s):
-  for artifact_type in artifact_types:
-    if artifact_type in s:
-      return artifact_type
+  for key, val in artifact_types.items():
+    if key in s:
+      return val
   raise KeyError("artifact type does not exist")
 
 def test_match_artifact_type():
@@ -130,15 +136,21 @@ def test_match_artifact_name():
   assert ret == '流放者怀表'
 
 
+def artifact_set_name_mapper(name: str):
+  if name.endswith('之人') and len(name) == 4:
+    return f"祭{name[1]}之人"
+  return name
 
 # [\u4e00-\u9fa5] stands for chinese characters
 def match_artifact_set_name(s):
-  set_re = re.compile(r"([\u4e00-\u9fa5]+):")
+  set_re = re.compile(r"([\u4e00-\u9fa5]+)[:;]")
   ret = set_re.search(s)
   if ret is None:
     raise KeyError(f"artifact set name does not exist in {s!r}")
   else:
-    return ret[1]
+    name = ret[1]
+    name = artifact_set_name_mapper(name)
+    return name
 
 def test_match_artifact_set_name():
   s = '流放者:\n\x0c'

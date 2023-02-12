@@ -1,1 +1,1 @@
-import util
+from . import util
