@@ -1,74 +1,75 @@
 import cv2 as cv
-from .roi import ArtifactROI
+from .roi import ROI, ArtifactROI
 import dataclasses
 import numpy as np
+from typing import List
 
-def pyramid_down(image, n):
+def pyramid_down(image: np.array, n: int):
   for _ in range(n):
     image = cv.pyrDown(image)
-  return image
+  factor = 1/2**n
+  return image, factor
 
 
 class ScreenState:
-  roi: ArtifactROI
-  transformed_roi: ArtifactROI
-  def __init__(self, roi):
-    self.roi = roi
+  roi: List[ROI]
+  transformed_roi: List[ROI]
+  def __init__(self, roi_list):
+    self.roi_list = roi_list
+    self.scaled_roi_list = None
 
-    self.transformed_roi = None
     self.previous = None
-
     self.small_screen = None
 
-  @staticmethod
-  def compare_roi(current, previous):
-    for k, v in current.items():
-      im_prev = previous[k]
-      im_curr = v
+    self.diff_threshold = 0.5
+    self.n_pyramid_down = 2
 
-      diff = np.mean((im_prev - im_curr)**2)
-      # print(f'{k} {diff=}')
-      
-      if diff > 0.5:
-        return False
+  def _is_same_image(self, current, previous):
+    diff = np.mean((current - previous)**2)
+    if diff > self.diff_threshold:
+      return False
     return True
 
   def compare(self, screen):
-    current = {}
-    roi_props = dataclasses.asdict(self.transformed_roi)
-    for k, v in roi_props.items():
-      x, y, xx, yy = v
-      current[k] = screen[y:yy, x:xx]
+    current = []
+    for i, roi in enumerate(self.scaled_roi_list):
+      clip = roi.clip_image(screen)
+      current.append(clip)
 
     result = False
     if self.previous:
-      result = self.compare_roi(current, self.previous)
+      def compare_all():
+        for i in range(len(self.scaled_roi_list)):
+          if not self._is_same_image(current[i], self.previous[i]):
+            return False
+        return True
+      result = compare_all()
     self.previous = current
     return result
 
   def is_same(self, screen):
-    small_screen = cv.cvtColor(screen, cv.COLOR_BGR2GRAY)
-    small_screen = pyramid_down(small_screen, 2)
-    self.small_screen = small_screen
+    screen = cv.cvtColor(screen, cv.COLOR_BGR2GRAY)
+    screen, factor = pyramid_down(screen, self.n_pyramid_down)
+    self.small_screen = screen
 
-    if not self.transformed_roi:
-      w, h = small_screen.shape[:2]
-      ww, hh = screen.shape[:2]
-      ratio = w / ww
-      self.transformed_roi = self.roi.scale(ratio)
-      print(self.transformed_roi)
+    if not self.scaled_roi_list:
+      rois = []
+      for roi in self.roi_list:
+        troi = roi.scale(factor)
+        rois.append(troi)
+      self.scaled_roi_list = rois
 
-    return self.compare(small_screen)
+    return self.compare(screen)
 
 
 
 def test_roi_detection():
-  roi = ArtifactROI(
-      main=[1214, 150, 1500, 430],
-      sub=[1230, 590, 1800, 790],
-      level=[1251, 530, 1324, 570],
-      title=[1640, 35, 1869, 82],
-  )
+  roi = [
+    ROI(1214, 150, 1500, 430),
+    ROI(1230, 590, 1800, 790),
+    ROI(1251, 530, 1324, 570),
+    ROI(1640, 35, 1869, 82),
+  ]
 
   state = ScreenState(roi)
 

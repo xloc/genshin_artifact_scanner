@@ -43,14 +43,20 @@ class ROI:
 
   def __getitem__(self, i):
     return [self.x1, self.y1, self.x2, self.y2][i]
+
+  def __repr__(self):
+    return f"<ROI ({self.x1:4d}, {self.y1:4d}) ({self.x2:4d}, {self.y2:4d})>"
   
   def clip_image(self, image: numpy.array):
     return image[self.y1:self.y2, self.x1:self.x2, ...]
   
   def translate(self, x, y):
-    return ROI(self.x1 + x, self.y1 + y,
-               self.x2 + x, self.y2 + y)
-  
+    return type(self)(self.x1 + x, self.y1 + y,
+                      self.x2 + x, self.y2 + y)
+
+  def scale(self, factor: float):
+    return type(self)(*[int(v*factor) for v in list(self)])
+
   def copy(self):
     return ROI(**dataclasses.asdict(self))
 
@@ -67,3 +73,7 @@ def test_roi_clip_image():
 def test_roi_translate():
   a, b, c, d = ROI(1, 2, 3, 4).translate(10, 20)
   assert a==11 and b==22 and c==13 and d==24
+
+def test_roi_scale():
+  a, b, c, d = ROI(20, 20, 40, 40).scale(0.25)
+  assert a==5 and b==5 and c==10 and d==10
