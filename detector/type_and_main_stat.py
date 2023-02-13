@@ -26,7 +26,7 @@ def find_all_text_roi_in_range(gray, roi: ROI, color_range, kernel_size, kernel_
 
 def parse_type(gray: np.array, roi: ROI):
   slice = roi.clip_image(gray)
-  text = ocr.image_to_string(slice, lang="chi_sim")
+  text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   return scanner.match_artifact_type(text)
 
 def parse_main_stat_name(gray: np.array, roi: ROI):

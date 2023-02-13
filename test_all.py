@@ -3,12 +3,18 @@ import numpy as np
 import cv2 as cv
 from detector import level, type_and_main_stat, artifact_set_name, sub_stats
 
-class allroi:
-  upper = ROI(1214, 230, 1550, 430)
-  lower = ROI(1213, 504, 1830, 1111)
-  level = ROI(1251, 530, 1324, 570)
-  sub_stats_template = ROI(1270, 590, 1800, 504)
+# class allroi:
+#   upper = ROI(1214, 230, 1550, 430)
+#   lower = ROI(1213, 504, 1830, 1111)
+#   level = ROI(1251, 530, 1324, 570)
+#   sub_stats_template = ROI(1270, 590, 1800, 504)
 
+
+class allroi:
+  upper = ROI(1434, 265, 1828, 520)
+  lower = ROI(1434, 596, 2159, 1310)
+  level = ROI(1476, 632, 1561, 674)
+  sub_stats_template = ROI(1500, 700, 2141, 596)
 
 class ArtifactFields:
   def __repr__(self):
@@ -59,8 +65,12 @@ def test_parse_all(video_path: str):
     if frame is None: break
     
     if not state.is_same(frame):
-      info = parse_frame(frame)
-      info = info.__dict__
+      try:
+        info = parse_frame(frame)
+        info = info.__dict__
+      except Exception as e:
+        info = dict(error_message=str(e))
+        
 
       if is_data_same(info, last_info):
         continue
