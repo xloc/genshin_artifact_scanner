@@ -2,6 +2,7 @@ import collections
 import numpy as np
 import cv2 as cv
 import pathlib
+import traceback as tracebacklib
 
 import yaml
 
@@ -9,12 +10,20 @@ def defaultdict_representer(dumper, data):
     return dumper.represent_dict(dict(data))
 yaml.add_representer(collections.defaultdict, defaultdict_representer)
 
+def str_presenter(dumper, data):
+  if len(data.splitlines()) > 1:  # check for multiline string
+    return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='|')
+  return dumper.represent_scalar('tag:yaml.org,2002:str', data)
+yaml.add_representer(str, str_presenter)
+
 
 class SketchRecorder:
-  def __init__(self, base_dir='.', save_all=False, save_error=True):
+  def __init__(self, base_dir='.', save_all=False, save_error=True, log_error=True):
     self.save_all = save_all
     self.save_error = save_error
+    self.log_error = log_error
     self.base_dir = pathlib.Path(base_dir)
+
     self.record = {}
   
   def save(self):
@@ -45,6 +54,14 @@ class SketchRecorder:
   
   def __exit__(self, exc_type, exc_value, traceback):
     is_error = exc_type is not None
+
+    if is_error and self.log_error:
+      self.sketch('catched_exception/exception', exc_value)
+
+      trackback_object = tracebacklib.format_exception(exc_type, exc_value, traceback)
+      traceback_str = '\n'.join(trackback_object)
+      self.sketch('catched_exception/traceback', traceback_str)
+
     if self.save_all or (self.save_error and is_error):
       self.save()
     if is_error:
@@ -97,15 +114,18 @@ def test_sketch():
     sketch('z/c', 3)
     sketch('b/c', make_image(500, 500, 100))
   
+def test_excpetion_log():
+  import contextlib
 
-  # sr = SketchRecorder()
-  # sr.register()
+  options = dict(
+    log_error=True,
+    save_error=True
+  )
 
-  # assert can_sketch() is not None
-  # if recorder := can_sketch():
-  #   recorder.sketch('abc', 'asdf')
-  #   recorder.sketch('abd', 'asdf')
-
-  # assert str(sr) == "abc: 'asdf'\nabd: 'asdf'"
+  with contextlib.suppress(ValueError):
+    with SketchRecorder('sketch/exception', "options") as r:
+      raise ValueError("this is a value error")
+  
+    
 
   
