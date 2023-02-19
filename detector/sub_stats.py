@@ -1,8 +1,9 @@
 import cv2 as cv
-from scanner import ROI
-import scanner
 import pytesseract as ocr
-from .util import moph
+
+import scanner
+from scanner import ROI
+from sketch import sketch
 
 
 def find_sub_stats_roi(set_name_roi: ROI, sub_stats_template_roi: ROI):
@@ -12,7 +13,10 @@ def find_sub_stats_roi(set_name_roi: ROI, sub_stats_template_roi: ROI):
 
 
 def parse_sub_stats(gray, sub_stats_roi: ROI):
+  sketch('sub_stats/roi', sub_stats_roi)
+
   slice = sub_stats_roi.clip_image(gray)
+  sketch('sub_stats/before_ocr', slice)
   
   text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   set_name = scanner.match_sub_stats(text)
@@ -22,6 +26,7 @@ def parse_sub_stats(gray, sub_stats_roi: ROI):
 
 
 import pytest
+
 frame_timestamp = [
     (0,     {'元素精通': '13', '攻击力': '12', '生命值': '3.3%', '防御力': '19'}),
     (5.22,  {'攻击力': '2.5%', '防御力': '8'}),

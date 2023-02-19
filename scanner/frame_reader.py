@@ -46,6 +46,5 @@ def test_frame_reader():
 
   for i in range(3):
     frame = reader.next()
-    print(reader.frame_time)
     assert(frame.shape == (1260, 1920, 3))
     # cv.imshow(frame)

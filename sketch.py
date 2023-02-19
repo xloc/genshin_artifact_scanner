@@ -1,10 +1,13 @@
 import collections
-import numpy as np
-import cv2 as cv
 import pathlib
 import traceback as tracebacklib
 
 import yaml
+import numpy as np
+import cv2 as cv
+
+from scanner.roi import ROI
+
 
 def defaultdict_representer(dumper, data):
     return dumper.represent_dict(dict(data))
@@ -17,6 +20,13 @@ def str_presenter(dumper, data):
 yaml.add_representer(str, str_presenter)
 
 
+def roi_constructor(loader, node):
+  data = loader.construct_mapping(node)
+  return ROI(**data)
+yaml.add_constructor('!!python/object:scanner.roi.ROI', roi_constructor, Loader=yaml.FullLoader)
+
+
+
 class SketchRecorder:
   def __init__(self, base_dir='.', save_all=False, save_error=True, log_error=True):
     self.save_all = save_all
@@ -25,6 +35,26 @@ class SketchRecorder:
     self.base_dir = pathlib.Path(base_dir)
 
     self.record = {}
+
+  def _save_yaml(self, yaml_data: dict):
+    json = collections.defaultdict(dict)
+    for k in yaml_data:
+      curr = json
+      for nested in k.split("/")[:-1]:
+        curr = curr[nested]
+      curr[k.rsplit('/', 1)[-1]] = yaml_data[k]
+
+    self.base_dir.mkdir(parents=True, exist_ok=True)
+    file_path = self.base_dir / "data.yaml"
+
+    # if file_path.exists():
+    #   if file_path.is_dir():
+    #     raise FileExistsError(f"the file {file_path} is exist and is a dir")
+    #   with file_path.open() as f:
+    #     prev_yaml_data = yaml.load(f, Loader=yaml.FullLoader)
+    #   yaml_data.update(prev_yaml_data)
+    
+    yaml.dump(json, file_path.open('w'), allow_unicode=True)
   
   def save(self):
     # save all images
@@ -36,17 +66,7 @@ class SketchRecorder:
 
     # save everything else to yaml
     others = {k:v for k, v in self.record.items() if type(v) != np.ndarray}
-    json = collections.defaultdict(dict)
-    for k in others:
-      curr = json
-      for nested in k.split("/")[:-1]:
-        curr = curr[nested]
-      print(json)
-      curr[k.rsplit('/', 1)[-1]] = others[k]
-
-    self.base_dir.mkdir(parents=True, exist_ok=True)
-    file_path = self.base_dir / "data.yaml"
-    yaml.dump(json, file_path.open('w'), allow_unicode=True)
+    self._save_yaml(others)
 
   def __enter__(self):
     self.register()

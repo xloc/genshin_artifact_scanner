@@ -1,8 +1,10 @@
 import cv2 as cv
-from scanner import ROI
-import scanner
-import pytesseract as ocr
 import numpy as np
+import pytesseract as ocr
+
+import scanner
+from scanner import ROI
+from sketch import sketch
 
 
 def find_all_text_roi_in_range(gray, roi: ROI, color_range, kernel_size, kernel_n_iter):
@@ -25,21 +27,31 @@ def find_all_text_roi_in_range(gray, roi: ROI, color_range, kernel_size, kernel_
   return result
 
 def parse_type(gray: np.array, roi: ROI):
+  sketch('artifact_type/roi', roi)
+
   slice = roi.clip_image(gray)
+  sketch('artifact_type/before_ocr', slice)
+
   text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   return scanner.match_artifact_type(text)
 
 def parse_main_stat_name(gray: np.array, roi: ROI):
+  sketch('main_stat/roi', roi)
+
   slice = roi.clip_image(gray)
   slice = 255 - slice
-
   # slice = cv.equalizeHist(slice)
+  sketch('main_stat/before_ocr', slice)
 
   text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   return scanner.match_main_stat_name(text)
 
 def parse_main_stat_value(gray: np.array, roi: ROI):
+  sketch('main_stat_value/roi', roi)
+
   slice = roi.clip_image(gray)
+  sketch('main_stat_value/before_ocr', slice)
+
   text = ocr.image_to_string(slice, config="--psm 6")
   return scanner.match_main_stat_value(text)
 
@@ -64,6 +76,7 @@ def parse_type_main_stat_name_value(gray: np.array, upper_panel_roi: ROI):
 
 
 import pytest
+
 frame_timestamp = [
     (0,     ('时之沙', '攻击力', '22.3%')),
     (5.22,  ('理之冠', '暴击率', '7.5%')),

@@ -1,9 +1,12 @@
 import cv2 as cv
-from scanner import ROI
-import scanner
-import pytesseract as ocr
-from .util import moph
 import numpy as np
+import pytesseract as ocr
+
+import scanner
+from scanner import ROI
+from sketch import sketch
+
+from .util import moph
 
 
 def find_artifact_set_name_roi(screen: np.array, artifact_panel_roi: ROI):
@@ -28,11 +31,13 @@ def find_artifact_set_name_roi(screen: np.array, artifact_panel_roi: ROI):
 
 def parse_artifact_set_name(gray, set_name_roi: ROI):
   slice = set_name_roi.clip_image(gray)
+  sketch('artifact_set_name/roi', set_name_roi)
 
   slice = 255 - slice
   _, mask = cv.threshold(slice, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
   slice = slice & mask
   slice = cv.equalizeHist(slice)
+  sketch('artifact_set_name/before_ocr', slice)
   
   text = ocr.image_to_string(slice, lang="chi_sim", config="--psm 6")
   set_name = scanner.match_artifact_set_name(text)
@@ -42,6 +47,7 @@ def parse_artifact_set_name(gray, set_name_roi: ROI):
 
 
 import pytest
+
 frame_timestamp = [
     (0,     '流放者'),
     (5.22,  '祭水之人'),

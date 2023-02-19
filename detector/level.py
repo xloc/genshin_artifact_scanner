@@ -1,15 +1,17 @@
 import cv2 as cv
-from scanner import ROI
-import scanner
 import pytesseract as ocr
-from .util import moph
 
+import scanner
+from scanner import ROI
+from sketch import sketch
 
 
 def parse_level(gray, roi: ROI):
   slice = roi.clip_image(gray)
+  sketch('level/roi', roi)
 
   slice = 255 - slice
+  sketch('level/before_ocr', slice)
 
   text = ocr.image_to_string(slice)
   level = scanner.match_level(text)
@@ -18,6 +20,7 @@ def parse_level(gray, roi: ROI):
 
 
 import pytest
+
 frame_timestamp = [
     (0,     '9'),
     (5.22,  '4'),
