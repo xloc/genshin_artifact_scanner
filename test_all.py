@@ -1,7 +1,11 @@
+import pathlib
+import shutil
 from scanner import frame_reader, ScreenState, ROI
 import numpy as np
 import cv2 as cv
 from detector import level, type_and_main_stat, artifact_set_name, sub_stats
+
+import sketch
 
 # class allroi:
 #   upper = ROI(1214, 230, 1550, 430)
@@ -23,6 +27,7 @@ class ArtifactFields:
 
 def parse_frame(frame: np.array):
   artifact = ArtifactFields()
+  sketch.sketch('frame', frame)
   gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
   set_roi = artifact_set_name.find_artifact_set_name_roi(frame, allroi.lower)
@@ -51,7 +56,7 @@ def is_data_same(a, b):
   return aa == bb
 
 
-def test_parse_all(video_path: str):
+def test_parse_all(video_path: str, sketch_path: str):
   if not video_path:
     video_path = frame_reader.get_test_video_path()
   reader = frame_reader.FrameReader(video_path, time=0)
@@ -66,7 +71,12 @@ def test_parse_all(video_path: str):
     
     if not state.is_same(frame):
       try:
-        info = parse_frame(frame)
+        if sketch_path:
+          with sketch.SketchRecorder(f"{sketch_path}/{reader.time:.4f}", save_error=True, log_error=True):
+            info = parse_frame(frame)
+        else:
+          info = parse_frame(frame)
+
         info = info.__dict__
       except Exception as e:
         info = dict(error_message=str(e))
@@ -89,9 +99,15 @@ import click
 
 @click.command()
 @click.option("--output_path", type=click.Path(exists=False, dir_okay=False), default="output.yaml", help='artifacts output filename')
+@click.option("--sketch_path", type=click.Path(exists=False, dir_okay=True), default=None, help='debug sketch path')
 @click.argument("video_path", type=click.Path(exists=True, dir_okay=False))
-def command(output_path, video_path):
-  result = test_parse_all(video_path)
+def command(output_path, video_path, sketch_path):
+  sketch_path_obj = pathlib.Path(sketch_path)
+  if sketch_path_obj.exists():
+    shutil.rmtree(sketch_path_obj)
+
+
+  result = test_parse_all(video_path, sketch_path)
 
   import yaml
   with open(output_path, 'w') as f:
