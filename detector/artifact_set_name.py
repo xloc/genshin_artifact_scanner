@@ -23,6 +23,10 @@ def find_artifact_set_name_roi(screen: np.array, artifact_panel_roi: ROI):
   mask = moph(mask, kernel_size=[3, 3], n_iter=5)
 
   contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+  def bound_rect_area(c):
+    _, _, w, h = cv.boundingRect(c)
+    return w * h
+  contours = [c for c in contours if bound_rect_area(c) > 500]
   text_contour = min(contours, key=lambda i: cv.boundingRect(i)[1])
   x, y, w, h = cv.boundingRect(text_contour)
 
