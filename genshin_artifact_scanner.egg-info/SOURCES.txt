@@ -1,6 +1,13 @@
 MANIFEST.in
 setup.py
+sketch.py
 test_video.mp4
+detector/__init__.py
+detector/artifact_set_name.py
+detector/level.py
+detector/sub_stats.py
+detector/type_and_main_stat.py
+detector/util.py
 genshin_artifact_scanner.egg-info/PKG-INFO
 genshin_artifact_scanner.egg-info/SOURCES.txt
 genshin_artifact_scanner.egg-info/dependency_links.txt
